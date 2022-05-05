@@ -1,0 +1,129 @@
+<div class=" content">
+  <div class=" row">
+<div class=" col-lg-12 col-md-12">
+  <div class=" card">
+    <div class=" card-header">
+      <h1 class=" card-title">Open Tasks</h1>
+    </div>
+    <div class=" card-body">
+      
+      <div class=" table-responsive">
+        <table class=" table tablesorter" id="">
+          <thead class=" text-primary">
+            <tr>
+
+              <th *ngFor = "let column of headers">{{column}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor = " let testers of tester ;let i= index" class="active-row">
+  
+              <td>{{testers.Id}}</td>
+              <td>{{testers.Type}}</td>
+              <td>{{testers.Summary}}</td>
+              
+              <td>{{testers.Status}}</td>
+              <td>{{testers.Assignee}}</td>
+             
+              
+              
+            </tr>
+           
+           
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <div class=" row">
+    <div class=" col-lg-12 col-md-12">
+      <div class=" card">
+        <div class=" card-header">
+          <h1 class=" card-title">Resolved Tasks</h1>
+        </div>
+        <div class=" card-body">
+          
+          <div class=" table-responsive">
+            <table class=" table tablesorter" id="">
+              <thead class=" text-primary">
+                <tr>
+    
+                  <th *ngFor = "let column of headers">{{column}}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor = " let testers of tester2 ;let i= index" class="active-row">
+      
+                  <td>{{testers.Id}}</td>
+                  <td>{{testers.Type}}</td>
+                  <td>{{testers.Summary}}</td>
+                  
+                  <td>{{testers.Status}}</td>
+                  <td>{{testers.Assignee}}</td>
+                 
+                  
+                  
+                </tr>
+               
+               
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class=" row">
+        <div class=" col-lg-12 col-md-12">
+          <div class=" card">
+            <div class=" card-header">
+              <h1 class=" card-title">In Progress Tasks</h1>
+            </div>
+            <div class=" card-body">
+              
+              <div class=" table-responsive">
+                <table class=" table tablesorter" id="">
+                  <thead class=" text-primary">
+                    <tr>
+        
+                      <th *ngFor = "let column of headers">{{column}}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor = " let testers of tester3 ;let i= index" class="active-row">
+          
+                      <td>{{testers.Id}}</td>
+                      <td>{{testers.Type}}</td>
+                      <td>{{testers.Summary}}</td>
+                      
+                      <td>{{testers.Status}}</td>
+                      <td>{{testers.Assignee}}</td>
+                     
+                      
+                      
+                    </tr>
+                   
+                   
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+

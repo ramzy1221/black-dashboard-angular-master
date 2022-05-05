@@ -5,6 +5,7 @@ import { Router } from '@angular/router'
 import { HttpClient } from "@angular/common/http";
 import { stringify } from "querystring";
 import { analyzeAndValidateNgModules } from "@angular/compiler";
+import { Jirastatus } from "./jirastatus.model";
 
 
 
@@ -15,6 +16,7 @@ import { analyzeAndValidateNgModules } from "@angular/compiler";
   styleUrls: ["jirastatus.component.scss"]
 })
 export class jirastatusComponent implements OnInit {
+
   public canvas : any;
   public ctx;
   public datasets: any;
@@ -26,36 +28,35 @@ export class jirastatusComponent implements OnInit {
  public str:any ;
  public x:any;
  public m:any;
+ public headers = ["Issue","Type","Summary","Versions","Status","Assignee","Creator","Reporter","Created","DueDate"] ;
+ public rows:any;
+ alert:boolean=false
+ jirastatu:any;
+ jirastatus= new Jirastatus();
 
-  constructor(private router:Router,    private dataService:DataService,private service:DataService, private http:HttpClient,) {}
 
-  ngOnInit() {
-    console.log("hello");
-    this.http.get('http://127.0.0.1:8000/api/getall',).subscribe((res)=>{
-     // this.str=JSON.stringify(res);
-      //const userObj = JSON.parse(this.str);
-
-      
-     
-     let y:any;
-      y=Object.values(res);
+  constructor(private router:Router ,   private dataService:DataService,private service:DataService, private http:HttpClient,) {
     
-     let ob:object =y[0];
-     let tr:any=(Object.values(ob));
-     //console.log(tr.length)
-
-     for (var i = 0; i < tr.length; i++) {
-      let x = tr[i];
-      console.log(x.Id);
   }
-     let x=tr[4];
-     let m:any=x.Status;
-    //console.log(tr[0]);
-     //console.log(m);
 
-    },    err=>{
-      console.log(err);
-    })
+  ngOnInit() :void {
+    
+    this.getJirastatus();
 
     
-}}
+    
+}
+
+getJirastatus(){
+  this.http.get('http://127.0.0.1:8000/api/getall',).subscribe((res)=>{
+   // this.str=JSON.stringify(res);
+    //const userObj = JSON.parse(this.str);
+    //console.log(this.jirastatu=res) ;
+    return this.jirastatu=res ;
+
+  })
+  }
+
+
+
+}

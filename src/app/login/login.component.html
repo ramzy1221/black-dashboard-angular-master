@@ -1,0 +1,20 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ng2-bootstrap/x.x.x/ng2-bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+<body>
+<div>
+</div>
+    <div class="loginBox"> <img class="user"  height="100px" width="100px">
+        <h3>Sign in </h3>
+       
+        <form (ngSubmit)="onSubmit(loginform)" #loginform="ngForm"  >
+            <div class="inputBox"> <input id="email" type="email" name="email" placeholder="Email" ngModel>
+                 <input id="password" type="password" name="password" placeholder="Password" ngModel>
+            </div> <input  type="submit" name="" value="Login">
+        </form>
+        <div class="text-center">
+           
+            <button style="color: white;" type="button" class="btn btn-link" routerLink="/forget"  >Forget Password</button>
+        </div>
+    </div>
+    </body>

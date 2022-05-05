@@ -3,6 +3,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { RouterModule } from "@angular/router";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
+import {DragDropModule} from '@angular/cdk/drag-drop' ;
 
 import { AdminLayoutRoutes } from "./admin-layout.routing";
 import { DashboardComponent } from "../../pages/dashboard/dashboard.component";
@@ -23,6 +24,7 @@ import { jirastatusComponent } from "src/app/pages/jirastatus/jirastatus.compone
     FormsModule,
     HttpClientModule,
     NgbModule,
+    DragDropModule,
   ],
   declarations: [
     DashboardComponent,
