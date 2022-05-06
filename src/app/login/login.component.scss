@@ -9,7 +9,11 @@ body {
     overflow: hidden
   }
   
-   
+  body {
+    background-size: cover;
+    background-image: url("../../assets/login/backg.jpg");
+}
+
   
   
   #particles-js {

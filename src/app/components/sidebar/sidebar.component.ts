@@ -1,4 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, Input, OnInit } from '@angular/core';
+import { SenderService } from "src/app/sender.service";
+import { DataService } from "src/app/services/data.service";
 
 declare interface RouteInfo {
   path: string;
@@ -6,67 +8,55 @@ declare interface RouteInfo {
   rtlTitle: string;
   icon: string;
   class: string;
+  tp:string;
 }
 export const ROUTES: RouteInfo[] = [
-  {
-    path: "/dashboard",
-    title: "Dashboard",
-    rtlTitle: "لوحة القيادة",
+
+
+{
+    path: "/tester",
+    title: "Tasks",
+    rtlTitle: "",
     icon: "icon-chart-pie-36",
-    class: ""
+    class: "",
+    tp:"1",
   },
-  {
-    path: "/icons",
-    title: "Icons",
-    rtlTitle: "الرموز",
-    icon: "icon-atom",
-    class: ""
-  },
+
+  
+  
   {
     path: "/jirastatus",
     title: "jirastatus",
-    rtlTitle: "خرائط",
+    rtlTitle: "",
     icon: "icon-pin",
-    class: "" },
-  {
-    path: "/notifications",
-    title: "Notifications",
-    rtlTitle: "إخطارات",
-    icon: "icon-bell-55",
-    class: ""
-  },
+    class: "",
+    tp:"1",
+   },
+  
 
   {
     path: "/user",
     title: "User Profile",
     rtlTitle: "ملف تعريفي للمستخدم",
     icon: "icon-single-02",
-    class: ""
+    class: "",
+    tp:"1",
   },
   {
     path: "/tables",
     title: "Table List",
     rtlTitle: "قائمة الجدول",
     icon: "icon-puzzle-10",
-    class: ""
+    class: "",
+    tp:"1",
   },
-  {
-    path: "/typography",
-    title: "Typography",
-    rtlTitle: "طباعة",
-    icon: "icon-align-center",
-    class: ""
-  },
-  {
-    path: "/rtl",
-    title: "RTL Support",
-    rtlTitle: "ار تي ال",
-    icon: "icon-world",
-    class: ""
-  }
+  
+  
 ];
 
 @Component({
+  providers: [DataService,SenderService],
+
   selector: "app-sidebar",
   templateUrl: "./sidebar.component.html",
   styleUrls: ["./sidebar.component.css"]

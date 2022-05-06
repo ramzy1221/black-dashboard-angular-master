@@ -65,7 +65,7 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('user', JSON.stringify(res))
 
    
-      this.router.navigate(["/dashboard"])
+      this.router.navigate(["/tester"])
 
 
       
